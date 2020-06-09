@@ -24,12 +24,12 @@ replaceAllButton.addEventListener("click", function(){
     let find = findInput.value
     // userInputReplaceWith 
     let replace = replaceInput.value
-    for (let innertext = 0; innertext < rowElements.length; innertext +=1 ){
-        let innercells = getCellElements(rowElements[innertext])
-        for (let insidecells = 0; insidecells < innercells.length; insidecells +=1){
-            console.log(innercells[insidecells])
-            if (innercells[insidecells].innerText.includes(find)){
-                innercells[insidecells].innerHTML = innercells[insidecells].innerHTML.replace(find, replace)
+    for (let arrayElements = 0; arrayElements < rowElements.length; arrayElements +=1 ){
+        let loopOverCells = getCellElements(rowElements[arrayElements])
+        for (let insideCells = 0; insideCells < loopOverCells.length; insideCells +=1){
+            console.log(loopOverCells[insideCells])
+            if (loopOverCells[insideCells].innerText.includes(find)){
+                loopOverCells[insideCells].innerHTML = loopOverCells[insideCells].innerHTML.replace(find, replace)
 
             }
 
