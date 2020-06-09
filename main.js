@@ -19,9 +19,65 @@ function getCellElements (currentRowElement) {
     return currentRowElement.querySelectorAll(".cell")
 }
 
+replaceAllButton.addEventListener("click", function(){ 
+    
+    let find = findInput.value
+    // userInputReplaceWith 
+    let replace = replaceInput.value
+    for (let innertext = 0; innertext < rowElements.length; innertext +=1 ){
+        let innercells = getCellElements(rowElements[innertext])
+        for (let insidecells = 0; insidecells < innercells.length; insidecells +=1){
+            console.log(innercells[insidecells])
+            if (innercells[insidecells].innerText.includes(find)){
+                innercells[insidecells].innerHTML = innercells[insidecells].innerHTML.replace(find, replace)
 
-// YOUR CODE GOES HERE
+            }
 
+        }
+
+    }
+})
+///////////////////////////
+
+
+
+// for(let i = 0; i<rowElements.length; i++){
+//     let foundLetters = rowElements[i].length
+//     console.log(i, foundLetters)
+//     for(let j = 0; j<foundLetters; j++){
+//         console.log(foundletters[i][j])
+
+//     }
+// }
+
+    
+//     // myReplace
+//     alert("Your Request is Complete.")
+// })
+
+
+// function searchReplace(getCellElements, findUserInput, userInputReplaceWith){
+//     if ( findUserInput[0] === findUserInput[0].toUpperCase() ) {
+//         userInputReplaceWith = userInputReplaceWith[0].toUpperCase() + userInputReplaceWith.slice(1)
+//    }
+//    return getCellElements.replace(findUserInput, userInputReplaceWith)
+// }
+
+
+// function myReplace(getCellElements, findUserInput, userInputReplaceWith) {
+//     let capitalizedBefore = before[0].toUpperCase() + before.substring(1);
+//     let capitalizedAfter = after[0].toUpperCase() + after.substring(1);
+
+//     if (before === capitalizedBefore) {
+//         return str.replace(before, capitalizedAfter);
+//     } else {
+//         return str.replace(before, after.toLowerCase());
+//     }
+// }
+
+
+
+// let res = str.replace("Microsoft", "W3Schools");
 
 // One last thing: dedicate very careful attention to using variables and
 // naming them accurately.
